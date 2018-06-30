@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+
+<div>
+    {{session['filename']}}
+    <img src="{{ session['file_path'] }}">
+</div>
+
+<div>
+    <button type="button" onclick="window.location.href='/upload';">Предвиди друга слика</button>
+</div>
+
+</body>
+</html>
