@@ -1,11 +1,30 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Upload</title>
+    <link rel="stylesheet" type="text/css" href='/static/style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
+<div class="heading">
+    Автоматското опишување се извршува со моделите DeepRNN и DenseCaption
+</div>
+
 <form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}">
-    <input type=file name=photo>
-    <input type="submit">
+    <div class="heading2">Избери слика за автоматско опишување:</div>
+    <div class="wrap">
+        <span class="upload_button">
+            Избери слика
+            <i class="fa fa-upload"></i>
+            <input type=file name=photo class="hide_file">
+            <br/>
+            <br/>
+            <br/>
+        </span>
+        <button type="submit" class="upload_button">Опиши слика <i class="fa fa-send-o"></i></button>
+    </div>
 </form>
 </body>
 </html>

@@ -1,8 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 body, html {
     height: 100%;
     margin: 0;
+    font-family: Montserrat;
 }
 
 .bg {
@@ -23,14 +24,30 @@ body, html {
     color: #efe9e9;
     text-align: center;
     padding-top: 20%;
-    font-family: Roboto;
+}
+
+.heading {
+    font-size: 30px;
+    color: rgba(26, 88, 181, 0.8);
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 10%;
+    text-align: center;
+    font-weight: 900;
+}
+
+.heading2 {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 5%;
+    text-align: center;
+    font-weight: 900;
 }
 
 /* Button */
 
 .wrap {
     text-align: center;
-    font-family: Roboto;
 }
 
 i {
@@ -69,4 +86,50 @@ a.button2 {
 a.button2:hover {
     color: rgba(255, 255, 255, 0.85);
     box-shadow: rgba(26, 88, 181, 0.82) 0 0px 0px 40px inset
+}
+
+.upload_button {
+    font-family: Montserrat;
+    color: rgba(26, 88, 181, 0.8);
+    box-shadow: rgba(26, 88, 181, 0.8) 0 0px 0px 2px inset;
+    font-weight: 900;
+    width: 250px;
+    font-size: 16px;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-decoration: none;
+}
+
+.upload_button:hover {
+    font-family: Montserrat;
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(26, 88, 181, 0.82) 0 0px 0px 40px inset;
+    font-weight: 900;
+    width: 250px;
+    font-size: 16px;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background: none;
+    font-weight: 900;
+    border: none;
+    text-decoration: none;
+}
+
+.button {
+    background-color: #ffffff00;
+    color: rgba(26, 88, 181, 0.8);
+    font-weight: 900;
+    border: none;
+    text-decoration: none;
+}
+
+.hide_file {
+    opacity: 0;
+    cursor: pointer;
+    left: 40%;
+    position: absolute;
 }
