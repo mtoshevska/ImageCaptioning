@@ -5,6 +5,7 @@ from tqdm import tqdm
 import string
 from nltk.tokenize import word_tokenize
 
+
 class Vocabulary(object):
     def __init__(self, size, save_file=None):
         self.words = []

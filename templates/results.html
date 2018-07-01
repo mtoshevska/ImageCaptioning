@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Results</title>
+    <link rel="stylesheet" type="text/css" href='/static/style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <div>
-    {{session['filename']}}
-    <img src="{{ session['file_path'] }}">
+    <div class="heading3">
+        Резултат за слика: {{session['filename']}}
+    </div>
+    <img src="{{ session['file_path'] }}" class="result_img">
+    <div class="result_text">
+        <span>DeepRNN: </span>{{ session['deeprnn_caption'] }}
+        <br/>
+        <br/>
+        <span>DenseCaption: </span>{{ session['deeprnn_caption'] }}
+    </div>
 </div>
 
 <div>
-    <button type="button" onclick="window.location.href='/upload';">Предвиди друга слика</button>
+    <div class="wrap">
+            <a href="/upload" class="button">Избери друга слика <i class="fa fa-repeat"></i></a>
+    </div>
 </div>
 
 </body>

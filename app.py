@@ -1,5 +1,6 @@
 import os
 import glob
+from deeprnn.deeprnn import generate_deeprnn_captions
 from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
 from flask import Flask, render_template, request, redirect, session
 
@@ -25,7 +26,9 @@ def upload():
             os.remove(filename)
         filename = photos.save(request.files['photo'])
         session['filename'] = filename
-        session['file_path'] = '/' + app.config['UPLOADED_PHOTOS_DEST'] + '/' + filename
+        file_path = '/' + app.config['UPLOADED_PHOTOS_DEST'] + '/' + filename
+        session['file_path'] = file_path
+        session['deeprnn_caption'] = 'caption ......'  # generate_deeprnn_captions('..' + file_path)
         return redirect('/results', code=302)
     return render_template('upload.html')
 

@@ -44,6 +44,32 @@ body, html {
     font-weight: 900;
 }
 
+.heading3 {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-weight: 900;
+}
+
+.result_img {
+    max-width: 30%;
+    width: 30%;
+    margin-right: 35%;
+    margin-left: 35%;
+}
+
+.result_text {
+    margin: 3%;
+    text-align: center;
+}
+
+.result_text > span {
+    color: rgba(26, 88, 181, 0.82);
+    font-weight: 900;
+}
+
 /* Button */
 
 .wrap {
@@ -69,8 +95,9 @@ a {
 }
 
 a.button {
-    color: rgba(30, 22, 54, 0.6);
-    box-shadow: rgba(26, 88, 181, 0.4) 0 0px 0px 2px inset;
+    color: rgba(26, 88, 181, 0.82);
+    box-shadow: rgba(26, 88, 181, 0.82) 0 0px 0px 2px inset;
+    max-width: 240px;
 }
 
 a.button:hover {
