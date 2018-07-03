@@ -1,8 +1,11 @@
 import os
 import glob
 from deeprnn.deeprnn import generate_deeprnn_captions
+from densecap.densecap import generate_densecap_captions
 from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
 from flask import Flask, render_template, request, redirect, session
+
+os.environ["CUDA_VISIBLE_DEVICES"] = '1'
 
 app = Flask(__name__)
 
@@ -28,7 +31,10 @@ def upload():
         session['filename'] = filename
         file_path = '/' + app.config['UPLOADED_PHOTOS_DEST'] + '/' + filename
         session['file_path'] = file_path
-        session['deeprnn_caption'] = 'caption ......'  # generate_deeprnn_captions('..' + file_path)
+        deeprnn_caption = generate_deeprnn_captions('.' + file_path)
+        session['deeprnn_caption'] = deeprnn_caption
+        densecap_caption = generate_densecap_captions('.' + file_path)
+        session['densecap_caption'] = densecap_caption
         return redirect('/results', code=302)
     return render_template('upload.html')
 

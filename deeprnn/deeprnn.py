@@ -16,4 +16,6 @@ def generate_deeprnn_captions(image_path):
         model.load(sess, 'models/259999.npy')
         tf.get_default_graph().finalize()
         caption = model.test(sess, dataset, vocabulary)
-        return caption[0]
+    tf.reset_default_graph()
+    tf.Graph().as_default()
+    return caption[0]
