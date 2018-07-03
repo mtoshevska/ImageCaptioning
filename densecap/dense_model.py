@@ -1888,8 +1888,8 @@ class DenseImageCapRCNN:
             log("molded_images", molded_images)
             log("image_metas", image_metas)
         # Run caption generation
-        with graph.as_default():
-            generations, img_cap_captions, features, rpn_rois, rpn_class, rpn_bbox = \
+        #with graph.as_default():
+        generations, img_cap_captions, features, rpn_rois, rpn_class, rpn_bbox = \
                 self.keras_model.predict([molded_images, image_metas], verbose=0)
         # Process detections
         results = []

@@ -2,7 +2,7 @@ import os
 import glob
 from deeprnn.deeprnn import generate_deeprnn_captions
 from densecap.densecap import generate_densecap_captions
-from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
+from flask_uploads import UploadSet, configure_uploads, IMAGES
 from flask import Flask, render_template, request, redirect, session
 
 os.environ["CUDA_VISIBLE_DEVICES"] = '1'
